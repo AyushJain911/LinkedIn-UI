@@ -1,0 +1,698 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #e9e5df;
+    --white-color: #fff;
+    --default-color: #585c60;
+    --button-color: #0a66c2;
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* cusotm css */
+.d-flex {
+    display: flex;
+}
+
+.margin-tb {
+    margin: .5em 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.w-33 {
+    width: 33.33%;
+    font-size: 20px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* ----------------------------------Navbar Styling---------------------------------- */
+nav {
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-bottom: .8rem;
+    padding: .5em 0;
+}
+
+nav .profile,
+nav .message-icon i {
+    width: 10%;
+}
+
+nav .message-icon i {
+    font-size: 2em;
+    text-align: center;
+    color: #585c60;
+    transition: .3s;
+}
+
+nav .message-icon i:hover {
+    color: #74bddc;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    left: 2em;
+    transition: .2s linear;
+}
+
+.profile img:hover {
+    transform: scale(1.5) !important;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+}
+
+.container .main {
+    position: relative;
+    border: none;
+    background: #dce6f1;
+    border-radius: .3em;
+    padding: .6em .2em .5em 2.7em;
+    font-size: 1em;
+    color: #555;
+    width: 100%;
+}
+
+.searchicon {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    background: transparent;
+    border: 3px solid #5F8FA4;
+    left: 1em;
+    top: .6em;
+    border-radius: 100%;
+}
+
+.searchicon:after {
+    content: "";
+    position: absolute;
+    background: #5F8FA4;
+    height: 6px;
+    width: 3px;
+    bottom: -5px;
+    right: -3px;
+    transform: rotate(-45deg);
+}
+
+.microphone {
+    position: absolute;
+    right: 1em;
+    top: .4em;
+}
+
+.microphone>i {
+    font-size: 1.5em;
+    color: #585c60;
+}
+
+
+/*---------------------------------------css for message page-------------------------- */
+
+.message-page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    transform: translate(100%) scale(0);
+}
+
+.message-page .message-header {
+    padding:1em 1.5rem;
+}
+
+.message-page .message-header .d-flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-page .message-header .d-flex div span:nth-child(2) {
+    margin-left: 1em;
+}
+
+.message-page .message-body {
+    padding:0 .5em;
+}
+
+.message-page .message-body .container {
+    width: 100%;
+}
+
+.message-page .message-body input {
+    padding-left: 3em;
+    background-color: white;
+}
+
+.message-page .message-body span {
+    vertical-align: middle;
+}
+
+/* ------------------------------------message footer------------------------------------ */
+.message-footer{
+    padding:.5em 1.5em;
+}
+
+.message-footer .message-box{
+    justify-content: space-between;
+}
+.message-footer img{
+    border-radius: 50%;
+    width:4em;
+    height: 4em;
+}
+
+.senderName{
+    justify-content: center;
+    align-items: center;
+}
+
+.msgTime p:nth-child(2){
+    text-align: -webkit-right;
+    margin-top:.2em;
+}
+
+.msgTime span{
+    background-color: var(--button-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: block;
+    width: .8em;
+    text-align: center;
+}
+.senderName span:first-child{
+    margin-right: 1em;
+}
+
+.senderName h3{
+    color: var(--default-color);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+/*--------------------------------- css for profile section------------------------------- */
+.profileSection {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    transform: translate(100%) scale(0);
+    transition: .2s ease-in-out;
+    z-index: 999;
+}
+
+.showProfilePage {
+    transform: translate(0%) scale(1);
+}
+
+.search-Bar {
+    width: 100%;
+    padding: 1.5em;
+    align-items: center;
+}
+
+.search-Bar i {
+    color: var(--default-color);
+}
+
+.backBtn {
+    text-align: left;
+}
+
+.profile-Search {
+    position: relative;
+    text-align: center;
+}
+
+.profile-Search span {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 4px;
+}
+
+.porfile-Input {
+    padding: 10px 30px 10px 50px;
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.profile-setting {
+    text-align: right;
+}
+
+.background {
+    background: url('../assets/profileBG.jpg');
+    height: 150px;
+    background-size: cover;
+}
+
+.profile-contents .content-header {
+    padding: 1.5em;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--white-color);
+}
+
+.profile-contents .content-header .pro-img {
+    position: absolute;
+    top: -5em;
+}
+
+.profile-contents .content-header .pro-img img {
+    border-radius: 50%;
+}
+
+.profile-contents .content-header .pro-img span {
+    position: relative;
+    font-size: 2em;
+    color: var(--default-color);
+    left: -1.2em;
+    top: -1rem;
+    color:var(--white-color);
+    box-shadow: 0 0 10px -2px black;
+    border-radius: 50%;
+}
+
+.profile-contents .content-header .content-icons {
+    text-align: right;
+}
+
+.profile-contents .content-header .content-icons span {
+    font-size: 1.5em;
+}
+
+.profile-contents .content-header .content-icons span:nth-child(1) {
+    color: var(--button-color);
+    margin-right: 1em;
+}
+
+.profile-contents .content-body {
+    padding: 1.5em;
+}
+
+.profile-contents .content-body span {
+    color: var(--default-color);
+}
+
+.profile-contents .content-body h4 {
+    color: var(--button-color);
+}
+
+.profile-contents .content-body .profile-btns {
+    margin: 1.5em 0;
+}
+
+.profile-contents .content-body .profile-btns a {
+    background: var(--button-color);
+    padding: .5em 1em;
+    border-radius: 1em;
+    color: white;
+}
+
+.profile-contents .content-body .profile-btns a:nth-child(3) {
+    background: white;
+    border: 1px solid var(--default-color);
+}
+
+.profile-contents .content-body .profile-btns a span {
+    color: var(--default-color);
+    position: relative;
+    top: -0.15em;
+    font-size: 1.5em;
+}
+
+.profile-contents .content-footer {
+    padding: 1.5em;
+    position: relative;
+    background: #585c6054;
+    margin: 0 1.5em;
+    border-radius: 0.5em;
+}
+
+.profile-contents .content-footer div h4:nth-child(3) {
+    color: var(--button-color);
+}
+
+.profile-contents .content-footer div span {
+    position: absolute;
+    top: 1.5em;
+    right: 3em;
+}
+
+.profile-contents .content-dashboard {
+    padding: 1.5em 1.5em .2em 1.5em;
+}
+
+.profile-contents .content-dashboard .relative {
+    position: relative;
+}
+
+.profile-contents .content-dashboard .relative>span,
+.relative div>span {
+    color: var(--default-color);
+}
+
+.profile-contents .content-dashboard .relative div {
+    position: absolute;
+    top: 1em;
+    right: 1.2em;
+}
+
+.profile-contents .content-dashboard .relative div span {
+    margin: 0 .5em;
+    font-weight: 800;
+}
+
+.profile-contents .content-dashboard .daseboard-footer {
+    margin-top: 1em;
+    align-items: center;
+    background: var(--white-color); 
+    padding: 1em;
+    border-radius: .5em;
+
+}
+
+.profile-contents .content-dashboard .daseboard-footer div:nth-child(2) {
+    border-left: .1em solid black;
+    border-right: .1em solid black;
+}
+
+.profile-contents .daseboard-footer div h4 {
+    color: var(--button-color);
+}
+
+.profile-contents .daseboard-footer div p {
+    color: var(--default-color);
+}
+
+/* --------------------------------Post Card Styling-------------------------------- */
+.post-card {
+    background-color: var(--white-color);
+    padding: 1.5em;
+    margin-bottom: 1em;
+}
+
+.post-card .info p {
+    color: var(--default-color);
+    width: 97%;
+    font-size: 1.1em;
+}
+
+.post-card .info a {
+    color: var(--default-color);
+    text-align: end;
+    width: 3%;
+    font-size: 1.1em;
+    transition: .1s ease-in-out;
+}
+
+.post-card .info a:hover {
+    transform: scale(1.5);
+}
+
+.post-card .info a:visited {
+    color: blue;
+}
+
+.post-card hr {
+    margin-top: 1em;
+    color: var(--default-color);
+}
+
+/* -------------------------------Random post styling------------------------------- */
+.post-card .card {
+    padding: 1em 0 0;
+}
+
+.random-post .random-profile {
+    width: 7%;
+}
+
+.random-post .random-profile img {
+    border-radius: 50%;
+    width: 4em;
+}
+
+.random-profile-details p {
+    line-height: 1.5;
+    color: var(--default-color);
+}
+
+.random-profile-details p strong {
+    color: #000;
+}
+
+.posting-material button {
+    margin: 1em 0;
+}
+
+.posting-material p,
+.posting-material img {
+    margin-top: 1em;
+}
+
+.posting-material img {
+    width: 100%;
+    height: 30em;
+}
+
+#moreText {
+    display: none;
+}
+
+.social-icons {
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.social-icons span {
+    font-size: 1em;
+    padding: .2em;
+    border-radius: 50%;
+    color: var(--default-color);
+}
+
+.social-icons .icons span:nth-child(1) {
+    background-color: #378fe9;
+}
+
+.social-icons .icons span:nth-child(2) {
+    background-color: #e8ab48;
+}
+
+.social-icons .icons span:nth-child(3) {
+    background-color: #74daa9;
+}
+
+.like-comment {
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.like-comment div span {
+    transition: .2s ease-in-out;
+}
+
+.like-comment div:hover span {
+    transform: scale(1.5);
+}
+
+/* --------------------------------Footer------------------------------------------- */
+footer {
+    background-color: var(--white-color);
+    padding: 1em 0;
+    position: sticky;
+    bottom: 0;
+}
+
+footer .footer-icons {
+    justify-content: space-around;
+}
+
+footer .footer-icon {
+    transition: .4s ease-in-out;
+    color: var(--default-color);
+}
+
+.footer-icons div {
+    position: relative;
+}
+
+.active,
+.footer-icons span:hover {
+    color: var(--white-color) !important;
+    background-color: black;
+}
+
+.top-border {
+    position: absolute;
+    top: -15px;
+    left: -22px;
+    width: 2em;
+    height: 4px;
+    background-color: #000;
+    display: block;
+}
+
+/* --------------------------------------------Responsiveness-------------------------------------------- */
+@media(min-width:320px) {
+    nav .profile {
+        text-align: center;
+        width: 21%;
+    }
+
+    nav .profile img {
+        position: static;
+    }
+
+    nav .container {
+        width: 64%;
+    }
+
+    nav .message {
+        width: 14%;
+    }
+
+    .post-card .info>p {
+        font-size: 1em;
+    }
+
+    .post-card .random-profile {
+        width: 20%;
+        margin-right: .8em;
+    }
+
+    .post-card .random-profile img {
+        width: 100%;
+    }
+
+    .like-comment span {
+        font-size: 1em;
+    }
+
+    .posting-material img {
+        height: 100%;
+    }
+
+    .footer-icons span {
+        font-size: 1.5em;
+    }
+
+    .top-border {
+        left: -13px;
+    }
+
+    .daseboard-footer .text-center{
+        font-size: .8em;
+    }
+}
+
+@media(min-width:410px) {
+    nav .profile {
+        width: 17%;
+    }
+
+    nav .container {
+        width: 74%;
+    }
+
+    nav .message {
+        width: 11%;
+    }
+
+    .random-profile {
+        width: 15% !important;
+        margin-right: 1em !important;
+    }
+
+    .daseboard-footer .text-center{
+        font-size: 1em;
+    }
+}
+
+@media(min-width:768px) {
+    nav .profile {
+        width: 10%;
+    }
+
+    nav .profile img {
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    nav .container {
+        width: 80%;
+    }
+
+    nav .message {
+        width: 5%;
+    }
+
+    .post-card .info p,
+    .random-profile-details {
+        font-size: 1.5em;
+    }
+
+    .posting-material p {
+        font-size: 1.3em;
+    }
+
+    .like-comment span {
+        font-size: 1.8em;
+    }
+
+    footer .footer-icon {
+        font-size: 2em;
+    }
+
+    .top-border {
+        left: -25px;
+        width: 3em;
+    }
+}
+
+@media(min-width:926px) {
+    .random-profile {
+        width: 8% !important;
+    }
+}
+
+@media(min-width:1280px) {
+    .footer-icon {
+        font-size: 2.5em !important;
+    }
+
+    .top-border {
+        left: -20px;
+    }
+}
